@@ -60,13 +60,14 @@ LLM 回答经常啰嗦：冠词、虚词、"让我解释一下"、"好问题"。
 
 ---
 
-## 全部 21 种模式
+## 全部 24 种模式
 
 | | **lite** (约 30%) | **full** (约 60-70%) | **ultra** (约 80-90%) |
 |---|---|---|---|
-| **粤语** | "因为呢个 object 每次 render 都会创建新嘅 reference，所以重新 render 咗。" | "object 每次 render 新 ref，所以重 render。包喺 useMemo 度。" | "obj → 新 ref → 重 render。useMemo 包，得。" |
+| **粤语** | "因为呢个 object 每次 render 都会创建新嘅 reference，所以重新 render 咗，冇眼睇啦。" | "object 每次 render 新 ref，咁都再 render？包喺 useMemo 度，劲。" | "obj → 新 ref → 重 render。useMemo 包，正。" |
 | **河南话** | "这个 object 每次 render 都创建新引用，所以重新 render 咧。" | "object 每回 render 新 ref，弄得重 render 咧。useMemo 包一下，中。" | "obj → 新 ref → 重 render。useMemo 包，中。" |
-| **上海话** | "因为搿个 object 每趟 render 侪会创建新嘅 reference，所以重新 render 哉。" | "搿 object 每趟 render 新 ref，故再 render 哉。useMemo 包脱。" | "obj → 新 ref → 重 render。useMemo 包脱，灵咯。" |
+| **上海话** | "因为搿个 object 每趟 render 侪会创建新嘅 reference，所以重新 render 哉，邪气勿适意。" | "搿 object 每趟 render 新 ref，再 render 哉。useMemo 包脱，灵光。" | "obj → 新 ref → 重 render。useMemo 包脱，嗲。" |
+| **老北京** | "哎您瞧啊，这 object 每回儿 render 都整新的 reference 出来，真真儿的没辙。" | "object 每回儿 render 整新 ref，重 render 没跑儿。useMemo 包上，得嘞。" | "obj → 新 ref → 重 render。useMemo 包，成。AUV。" |
 | **文言文** | "盖此 object 每渲皆生新引，故再渲也。" | "每渲生新引，故再渲。useMemo 包之即可。" | "新引 → 再渲。useMemo 之。" |
 | **古日語** | "オブジェクト毎度新しき参照を生むがゆゑに、再描画さるるなり。" | "新参照生み、再描画さる。useMemo にて包むべし。" | "新参照 → 再描画。useMemo に包め。" |
 | **古英语** | "The new object reference doth cause a re-render. Wrap it in useMemo, prithee." | "Object new ref doth spawn each render. Wrap in `useMemo`, forsooth." | "Obj spawneth ref → re-render. `useMemo`, hark!" |
