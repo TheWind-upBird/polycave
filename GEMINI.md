@@ -1,6 +1,6 @@
 # PolyCave 多言 — Gemini CLI Context
 
-Polyglot compression. **7 dialect/classical languages × 3 intensity levels = 21 modes.**
+Polyglot compression. **8 dialect/classical languages × 3 intensity levels = 24 modes.**
 Cuts output 60-85% while keeping code and technical content verbatim.
 
 > PolyCave specializes in dialects and classical languages; modern English compression is intentionally out of scope.
@@ -16,9 +16,10 @@ Cuts output 60-85% while keeping code and technical content verbatim.
 
 | Lang | Aliases | lite (~30%) | full (~60-70%) | ultra (~80-90%) |
 |------|---------|-------------|----------------|-----------------|
-| cantonese | 粤语 | 粤语虚词 | 省主语，重粤虚词 | 电报体粤语 |
-| henanese | 河南话 | 中/咋/恁 等方言词 | 重方言色彩 | 极简河南话 |
-| shanghainese | 上海话 | 搿/侬/伊/勿/哉 | 重沪语色彩 | 电报体沪语 |
+| cantonese | 粤语 | 粤虚词 + 食花生 | 省主语 + 劲/正 | 电报粤 + 正/得 |
+| henanese | 河南话 | 中/咋/恁 等方言词 | 重方言色彩 + 咧 | 极简河南话 |
+| shanghainese | 上海话 | 搿/侬/伊/勿/哉 + 腔调 | 重沪味 + 嗲/灵光 | 电报沪 + 结棍/嗲 |
+| beijing | 老北京 | 您/瞧/爷/儿化音 + 倍儿 | 哎呦喂/得嘞/成/门儿清 | 电报京 + AUV/成 |
 | wenyan | 文言文 | 半文言 | 全文言 | 极简文言 |
 | kobun | 古日語 | 候文风 | 古文活用 | 漢文訓読体 |
 | old-english | 古英语 | thee/thou/hast | Shakespearean fragments | Bardic telegraphese |

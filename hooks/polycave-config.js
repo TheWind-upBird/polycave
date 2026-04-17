@@ -9,13 +9,14 @@ const CLAUDE_DIR = process.env.CLAUDE_CONFIG_DIR || path.join(HOME, '.claude');
 const STATE_FILE = process.env.POLYCAVE_STATE || path.join(CLAUDE_DIR, 'polycave-state.json');
 const HISTORY_FILE = process.env.POLYCAVE_HISTORY || path.join(CLAUDE_DIR, 'polycave-state-history.jsonl');
 
-const LANGUAGES = ['cantonese', 'henanese', 'shanghainese', 'wenyan', 'kobun', 'old-english', 'latin'];
+const LANGUAGES = ['cantonese', 'henanese', 'shanghainese', 'beijing', 'wenyan', 'kobun', 'old-english', 'latin'];
 const LEVELS = ['lite', 'full', 'ultra'];
 
 const ALIASES = {
   yue: 'cantonese', '粤': 'cantonese', '粤语': 'cantonese',
   henan: 'henanese', '河南': 'henanese', '河南话': 'henanese',
   shanghai: 'shanghainese', wu: 'shanghainese', '沪': 'shanghainese', '沪语': 'shanghainese', '上海': 'shanghainese', '上海话': 'shanghainese',
+  bj: 'beijing', 'jing-pianzi': 'beijing', beijinghua: 'beijing', '京': 'beijing', '京片子': 'beijing', '京话': 'beijing', '老北京': 'beijing', '北京': 'beijing', '北京话': 'beijing',
   classical: 'wenyan', '文言': 'wenyan', '文言文': 'wenyan',
   'ja-classical': 'kobun', '古日': 'kobun', '古日語': 'kobun', '文語': 'kobun',
   oe: 'old-english', 'early-modern': 'old-english', shakespearean: 'old-english', '古英语': 'old-english', '古英文': 'old-english',
@@ -131,10 +132,11 @@ function parseModeFromText(text) {
   }
 
   // Chinese / Japanese / English activation phrases
-  if (/(粤语|文言文|河南话|上海话|古日|文語|古英语|古英文)模式/.test(text)) {
+  if (/(粤语|文言文|河南话|上海话|老北京|北京话|京片子|古日|文語|古英语|古英文)模式/.test(text)) {
     const langMap = {
       '粤语': 'cantonese', '文言文': 'wenyan', '河南话': 'henanese',
-      '上海话': 'shanghainese', '古日': 'kobun', '文語': 'kobun',
+      '上海话': 'shanghainese', '老北京': 'beijing', '北京话': 'beijing', '京片子': 'beijing',
+      '古日': 'kobun', '文語': 'kobun',
       '古英语': 'old-english', '古英文': 'old-english',
     };
     for (const [k, v] of Object.entries(langMap)) {

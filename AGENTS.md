@@ -5,7 +5,7 @@ This file is read by AGENTS.md-aware tools (Codex, generic agents).
 ## What polycave is
 
 Polyglot compression mode. Cuts LLM output 60-85% by speaking in compressed
-registers across **7 dialect/classical languages × 3 intensity levels = 21 modes**.
+registers across **8 dialect/classical languages × 3 intensity levels = 24 modes**.
 Maintains full technical accuracy (code, identifiers, file paths verbatim).
 
 > **Polycave specializes in dialects and classical languages.** Modern English
@@ -24,9 +24,10 @@ Maintains full technical accuracy (code, identifiers, file paths verbatim).
 
 | Code | Aliases | Style |
 |------|---------|-------|
-| `cantonese` | yue, 粤语 | 粤语虚词 (嘅/咗/喺/咁), 省主语 |
+| `cantonese` | yue, 粤语 | 粤语虚词 (嘅/咗/喺/咁) + 梗 (劲/正/食花生) |
 | `henanese` | henan, 河南话 | 河南方言 (中/咋/恁/弄啥), 口语化 |
-| `shanghainese` | shanghai, wu, 沪语, 上海话 | 沪语虚词 (搿/侬/伊/勿/哉/脱), 省主语 |
+| `shanghainese` | shanghai, wu, 沪语, 上海话 | 沪语虚词 (搿/侬/伊/勿/哉/脱) + 梗 (嗲/结棍/腔调) |
+| `beijing` | bj, 老北京, 北京话, 京片子 | 京片子 (您/爷/哎呦喂/儿化音) + 梗 (AUV/得嘞/倍儿) |
 | `wenyan` | classical, 文言文 | 文言文虚词 (之/乎/者/也/矣), 80-90% 字数压缩 |
 | `kobun` | ja-classical, 古日語, 文語 | 古典助動詞 (なり/たり/けり/べし), 古文活用 |
 | `old-english` | oe, early-modern, shakespearean, 古英语 | Shakespearean: thee/thou/hast/forsooth |

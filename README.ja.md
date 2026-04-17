@@ -3,14 +3,14 @@
 > *多言にして字少なし — Many tongues, few words.*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Languages](https://img.shields.io/badge/languages-7-blue.svg)](#21-モード一覧)
-[![Modes](https://img.shields.io/badge/modes-21-purple.svg)](#21-モード一覧)
+[![Languages](https://img.shields.io/badge/languages-8-blue.svg)](#24-モード一覧)
+[![Modes](https://img.shields.io/badge/modes-24-purple.svg)](#24-モード一覧)
 
-Claude Code、Codex、Gemini CLI、Cursor、Windsurf、Cline、Copilot 向けの **方言・古典語圧縮スキル**。LLM の出力を **60-85% 削減**しつつ、コードや技術用語は一切無傷で残す。**7 つの方言・古典語 × 3 段階の強度 = 21 通りの圧縮モード**。
+Claude Code、Codex、Gemini CLI、Cursor、Windsurf、Cline、Copilot 向けの **方言・古典語圧縮スキル**。LLM の出力を **60-85% 削減**しつつ、コードや技術用語は一切無傷で残す。**8 つの方言・古典語 × 3 段階の強度 = 24 通りの圧縮モード**。
 
 🌐 **README**：[English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md)
 
-**方言と古典・文学的レジスターの圧縮に特化**。現代英語の圧縮は対象外（設計上の判断）。多言が活きるのは 広東語、河南語、上海語、文言文、古日語、シェイクスピア英語、ラテン語。
+**方言と古典・文学的レジスターの圧縮に特化**。現代英語の圧縮は対象外（設計上の判断）。多言が活きるのは 広東語、河南語、上海語、北京語（老北京 / 京片子）、文言文、古日語、シェイクスピア英語、ラテン語。
 
 ---
 
@@ -18,9 +18,10 @@ Claude Code、Codex、Gemini CLI、Cursor、Windsurf、Cline、Copilot 向けの
 
 LLM の応答は冗長になりがち：冠詞、ヘッジ、「説明します」「いい質問ですね」など。多言は無駄を削り本質を残し、さらに言語スタイルが選べる：
 
-- **広東語 (Cantonese)** — `嘅 / 咗 / 喺 / 咁` 多用、主語省略
+- **広東語 (Cantonese)** — `嘅 / 咗 / 喺 / 咁 / 劲 / 正 / 食花生 / 咁都得` 多用、主語省略、地道粤味
 - **河南語 (Henanese)** — 中国河南方言、`中 / 咋 / 恁 / 弄啥嘞` 風
-- **上海語 (Shanghainese)** — 上海呉語、`搿 / 侬 / 伊 / 勿 / 哉 / 脱` 多用
+- **上海語 (Shanghainese)** — 上海呉語、`搿 / 侬 / 伊 / 勿 / 哉 / 脱 / 腔调 / 嗲 / 结棍 / 灵光` 多用、地道沪味
+- **北京語 / 老北京 (Beijing / 京片子)** — 京味儿、`您 / 爷 / 儿化音 / 哎呦喂 (AUV) / 得嘞 / 倍儿棒 / 门儿清 / 瓷器`
 - **文言文 (Wenyan)** — 古典中国語、`之 / 乎 / 者 / 也 / 矣`、約 85% 削減
 - **古日語 (Kobun / 文語)** — `〜なり / 〜たり / 〜けり / 〜べし`
 - **古英語 (Old English)** — シェイクスピア期の Early Modern English：thee/thou/hast/forsooth
@@ -59,13 +60,14 @@ Bot: PolyCave deactivated. 通常モードに戻ります。
 
 ---
 
-## 21 モード一覧
+## 24 モード一覧
 
 | | **lite** (約 30%) | **full** (約 60-70%) | **ultra** (約 80-90%) |
 |---|---|---|---|
-| **粤语** | "因为呢个 object 每次 render 都会创建新嘅 reference，所以重新 render 咗。" | "object 每次 render 新 ref，所以重 render。" | "obj → 新 ref → 重 render。useMemo 包，得。" |
+| **粤语** | "因为呢个 object 每次 render 都会创建新嘅 reference，所以重新 render 咗，冇眼睇啦。" | "object 每次 render 新 ref，咁都再 render？包喺 useMemo 度，劲。" | "obj → 新 ref → 重 render。useMemo 包，正。" |
 | **河南话** | "这个 object 每次 render 都创建新引用，所以重新 render 咧。" | "object 每回 render 新 ref，弄得重 render 咧。" | "obj → 新 ref → 重 render。useMemo 包，中。" |
-| **上海话** | "因为搿个 object 每趟 render 侪会创建新嘅 reference，所以重新 render 哉。" | "搿 object 每趟 render 新 ref，故再 render 哉。" | "obj → 新 ref → 重 render。useMemo 包脱，灵咯。" |
+| **上海话** | "因为搿个 object 每趟 render 侪会创建新嘅 reference，所以重新 render 哉，邪气勿适意。" | "搿 object 每趟 render 新 ref，再 render 哉。useMemo 包脱，灵光。" | "obj → 新 ref → 重 render。useMemo 包脱，嗲。" |
+| **老北京** | "哎您瞧啊，这 object 每回儿 render 都整新的 reference 出来，真真儿的没辙。" | "object 每回儿 render 整新 ref，重 render 没跑儿。useMemo 包上，得嘞。" | "obj → 新 ref → 重 render。useMemo 包，成。AUV。" |
 | **文言文** | "盖此 object 每渲皆生新引，故再渲也。" | "每渲生新引，故再渲。useMemo 包之即可。" | "新引 → 再渲。useMemo 之。" |
 | **古日語** | "オブジェクト毎度新しき参照を生むがゆゑに、再描画さるるなり。" | "新参照生み、再描画さる。useMemo にて包むべし。" | "新参照 → 再描画。useMemo に包め。" |
 | **古英语** | "The new object reference doth cause a re-render. Wrap it in useMemo, prithee." | "Object new ref doth spawn each render. Wrap in `useMemo`, forsooth." | "Obj spawneth ref → re-render. `useMemo`, hark!" |
@@ -176,7 +178,7 @@ rm -rf ~/.claude/skills/polycave*
 | `/polycave <lang>-<level>` | 特定モード、例：`/polycave kobun-ultra` |
 | `/polycave <lang>` | `<lang>-full` の省略形 |
 | "polycave cantonese full" | 自然言語起動 |
-| "粤语模式" / "文言文模式" / "上海话模式" / "古英语模式" / "河南话模式" | 中国語起動 |
+| "粤语模式" / "文言文模式" / "上海话模式" / "老北京模式" / "古英语模式" / "河南话模式" | 中国語起動 |
 | "古日語モード" | 日本語起動 |
 
 ### 停止
@@ -194,6 +196,7 @@ rm -rf ~/.claude/skills/polycave*
 | `cantonese` | `yue`、`粤`、`粤语` |
 | `henanese` | `henan`、`河南`、`河南话` |
 | `shanghainese` | `shanghai`、`wu`、`沪`、`沪语`、`上海`、`上海话` |
+| `beijing` | `bj`、`jing-pianzi`、`京`、`京片子`、`京话`、`老北京`、`北京`、`北京话` |
 | `wenyan` | `classical`、`文言`、`文言文` |
 | `kobun` | `ja-classical`、`古日`、`古日語`、`文語` |
 | `old-english` | `oe`、`early-modern`、`shakespearean`、`古英语`、`古英文` |

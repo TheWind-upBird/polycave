@@ -3,14 +3,14 @@
 > *多言而少字。*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Languages](https://img.shields.io/badge/languages-7-blue.svg)](#全部-21-种模式)
-[![Modes](https://img.shields.io/badge/modes-21-purple.svg)](#全部-21-种模式)
+[![Languages](https://img.shields.io/badge/languages-8-blue.svg)](#全部-24-种模式)
+[![Modes](https://img.shields.io/badge/modes-24-purple.svg)](#全部-24-种模式)
 
-支持 Claude Code、Codex、Gemini CLI、Cursor、Windsurf、Cline、Copilot 的**方言/古语压缩 skill**。把 LLM 输出砍掉 **60-85%**，用 **7 种方言/古典语言 × 3 档强度 = 21 种压缩模式**，代码和技术内容一字不动。
+支持 Claude Code、Codex、Gemini CLI、Cursor、Windsurf、Cline、Copilot 的**方言/古语压缩 skill**。把 LLM 输出砍掉 **60-85%**，用 **8 种方言/古典语言 × 3 档强度 = 24 种压缩模式**，代码和技术内容一字不动。
 
 🌐 **README**：[English](README.md) · [简体中文](README.zh-CN.md) · [日本語](README.ja.md)
 
-**专注方言与古典/文学语种的压缩**。现代英文压缩不在范围内（设计如此）。多言的味道在 粤语、河南话、上海话、文言文、古日語、莎士比亚式古英语、拉丁文。
+**专注方言与古典/文学语种的压缩**。现代英文压缩不在范围内（设计如此）。多言的味道在 粤语、河南话、上海话、老北京（京片子）、文言文、古日語、莎士比亚式古英语、拉丁文。
 
 ---
 
@@ -18,9 +18,10 @@
 
 LLM 回答经常啰嗦：冠词、虚词、"让我解释一下"、"好问题"。多言砍废话留干货，还可以选语种风格：
 
-- **粤语 (Cantonese)** — `嘅 / 咗 / 喺 / 咁` 重虚词，省主语
+- **粤语 (Cantonese)** — `嘅 / 咗 / 喺 / 咁 / 劲 / 正 / 食花生 / 咁都得`，省主语，地道粤味
 - **河南话 (Henanese)** — `中 / 咋 / 恁 / 弄啥嘞`，口语化
-- **上海话 (Shanghainese)** — `搿 / 侬 / 伊 / 勿 / 哉 / 脱`，省主语
+- **上海话 (Shanghainese)** — `搿 / 侬 / 伊 / 勿 / 哉 / 脱 / 腔调 / 嗲 / 结棍 / 灵光`，省主语，地道沪味
+- **老北京 (Beijing / 京片子)** — `您 / 爷 / 儿化音 / 哎呦喂（AUV）/ 得嘞 / 倍儿棒 / 门儿清 / 瓷器`，京腔十足
 - **文言文 (Wenyan)** — `之 / 乎 / 者 / 也 / 矣`，约省 85% 字数
 - **古日語 (Kobun / 文語)** — `〜なり / 〜たり / 〜けり / 〜べし`
 - **古英语 (Old English)** — 莎士比亚式 Early Modern：thee/thou/hast/forsooth
@@ -176,7 +177,7 @@ rm -rf ~/.claude/skills/polycave*
 | `/polycave <lang>-<level>` | 指定模式，如 `/polycave shanghainese-ultra` |
 | `/polycave <lang>` | 简写为 `<lang>-full` |
 | "polycave cantonese full" | 自然语言激活 |
-| "粤语模式" / "文言文模式" / "上海话模式" / "古英语模式" / "河南话模式" | 中文激活 |
+| "粤语模式" / "文言文模式" / "上海话模式" / "老北京模式" / "古英语模式" / "河南话模式" | 中文激活 |
 | "古日語モード" | 日文激活 |
 
 ### 关闭
@@ -194,6 +195,7 @@ rm -rf ~/.claude/skills/polycave*
 | `cantonese` | `yue`、`粤`、`粤语` |
 | `henanese` | `henan`、`河南`、`河南话` |
 | `shanghainese` | `shanghai`、`wu`、`沪`、`沪语`、`上海`、`上海话` |
+| `beijing` | `bj`、`jing-pianzi`、`京`、`京片子`、`京话`、`老北京`、`北京`、`北京话` |
 | `wenyan` | `classical`、`文言`、`文言文` |
 | `kobun` | `ja-classical`、`古日`、`古日語`、`文語` |
 | `old-english` | `oe`、`early-modern`、`shakespearean`、`古英语`、`古英文` |

@@ -1,7 +1,7 @@
 {
   "name": "polycave",
-  "description": "Polycave 多言 — polyglot compression across 7 dialects/classical languages × 3 intensity levels (cantonese, henanese, shanghainese, wenyan, kobun, old-english, latin). Cuts LLM output 60-85% while keeping code untouched.",
-  "version": "0.1.0",
+  "description": "Polycave 多言 — polyglot compression across 8 dialects/classical languages × 3 intensity levels (cantonese, henanese, shanghainese, beijing, wenyan, kobun, old-english, latin). Cuts LLM output 60-85% while keeping code untouched.",
+  "version": "0.2.0",
   "author": {
     "name": "TheWind-upBird",
     "url": "https://github.com/TheWind-upBird"

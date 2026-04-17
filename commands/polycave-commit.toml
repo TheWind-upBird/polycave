@@ -1,10 +1,10 @@
-description = "Generate a polycave-style commit message. Optional args: language code (cantonese/henanese/shanghainese/wenyan/kobun/old-english/latin)."
+description = "Generate a polycave-style commit message. Optional args: language code (cantonese/henanese/shanghainese/beijing/wenyan/kobun/old-english/latin)."
 prompt = """
 Read the staged changes (run `git diff --cached`) and generate ONE Conventional
 Commits message following the polycave-commit SKILL.md rules.
 
 Language: {{args}} (default: match active polycave mode, or wenyan if none active)
-Aliases also accepted (粤语/河南话/上海话/文言文/古日語/古英语).
+Aliases also accepted (粤语/河南话/上海话/老北京/文言文/古日語/古英语).
 
 Output ONLY the commit message. Do not run git commit. Do not stage files.
 Do not add a co-authored-by line unless the user requested one.

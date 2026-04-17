@@ -9,8 +9,8 @@ Parse {{args}}:
 - "<lang>" alone → activate <lang>-full
 - "help" → show polycave-help skill
 
-Languages: cantonese, henanese, shanghainese, wenyan, kobun, old-english, latin
-Aliases also accepted: 粤语, 河南话, 上海话, 文言文, 古日語, 古英语, etc.
+Languages: cantonese, henanese, shanghainese, beijing, wenyan, kobun, old-english, latin
+Aliases also accepted: 粤语, 河南话, 上海话, 老北京, 文言文, 古日語, 古英语, etc.
 Levels: lite, full, ultra
 
 Note: modern English compression is intentionally out of scope — polycave

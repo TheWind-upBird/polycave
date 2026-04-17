@@ -1,7 +1,7 @@
 ---
 name: polycave-help
 description: >
-  Quick-reference for polycave 多言 modes and commands. Lists all 7 languages × 3
+  Quick-reference for polycave 多言 modes and commands. Lists all 8 languages × 3
   intensity levels and the trigger phrases. Use when user says "/polycave-help",
   "polycave help", "what polycave modes are there", or asks how to use polycave.
 ---
@@ -17,7 +17,7 @@ description: >
 | `/polycave` | Activate `wenyan-full` (default) |
 | `/polycave <lang>-<level>` | Activate specific mode |
 | "polycave cantonese full" | Plain-English activation |
-| "粤语模式" / "文言文模式" / "上海话模式" / "古英语模式" / "河南话模式" | CN activation |
+| "粤语模式" / "文言文模式" / "上海话模式" / "老北京模式" / "古英语模式" / "河南话模式" | CN activation |
 | "古日語モード" | JP activation |
 
 ## Modes
@@ -27,6 +27,7 @@ description: >
 | `cantonese` | yue, 粤, 粤语 |
 | `henanese` | henan, 河南, 河南话 |
 | `shanghainese` | shanghai, wu, 沪, 沪语, 上海, 上海话 |
+| `beijing` | bj, jing-pianzi, 京, 京片子, 京话, 老北京, 北京, 北京话 |
 | `wenyan` | classical, 文言, 文言文 |
 | `kobun` | ja-classical, 古日, 古日語, 文語 |
 | `old-english` | oe, early-modern, shakespearean, 古英语, 古英文 |
@@ -71,6 +72,7 @@ Then resumes the previous mode automatically.
 /polycave wenyan-full        → 文言文 full mode (default)
 /polycave 粤语-ultra          → Cantonese ultra
 /polycave 上海话-full          → Shanghainese full
+/polycave 老北京-full          → Beijing (京片子) full
 /polycave 古英语-full          → Old English (Shakespearean)
 /polycave latin-lite         → Latin lite
 /polycave kobun-full         → 古日語 full

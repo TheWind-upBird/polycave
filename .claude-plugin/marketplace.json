@@ -5,12 +5,12 @@
     "url": "https://github.com/TheWind-upBird"
   },
   "metadata": {
-    "description": "Polycave 多言 — polyglot compression for Claude Code. 7 dialects/classical languages × 3 intensity levels."
+    "description": "Polycave 多言 — polyglot compression for Claude Code. 8 dialects/classical languages × 3 intensity levels."
   },
   "plugins": [
     {
       "name": "polycave",
-      "description": "Polycave 多言. Cuts 60-85% tokens across cantonese, henanese, shanghainese, wenyan, kobun, old-english, latin.",
+      "description": "Polycave 多言. Cuts 60-85% tokens across cantonese, henanese, shanghainese, beijing, wenyan, kobun, old-english, latin.",
       "source": "./",
       "category": "productivity"
     }

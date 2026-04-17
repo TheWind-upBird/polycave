@@ -2,10 +2,10 @@
 name: polycave-commit
 description: >
   Generates terse, language-aware commit messages following Conventional Commits.
-  Subject ≤50 chars. Supports cantonese, henanese, shanghainese, wenyan, kobun,
-  old-english, latin. Use when user says "/polycave-commit", "polycave commit",
-  "write commit message", or asks for a commit suggestion. Only generates the
-  message — does not run `git commit`.
+  Subject ≤50 chars. Supports cantonese, henanese, shanghainese, beijing, wenyan,
+  kobun, old-english, latin. Use when user says "/polycave-commit", "polycave
+  commit", "write commit message", or asks for a commit suggestion. Only
+  generates the message — does not run `git commit`.
 ---
 
 Generate ONE commit message. Conventional Commits format. Subject ≤50 chars.
@@ -34,8 +34,8 @@ Body only if context demands it (≤72 chars/line).
 
 ### cantonese 粤语
 ```
-feat(auth): 加 401 自动 refresh token
-fix(db): 关机时收 pool
+feat(auth): 加 401 自动 refresh token，正
+fix(db): 关机时收 pool，劲
 docs(readme): 改安装步骤
 ```
 
@@ -48,9 +48,16 @@ chore: 整一下依赖版本
 
 ### shanghainese 上海话
 ```
-feat(auth): 加 401 自动 refresh token，灵咯
-fix(db): 关机辰光关脱 pool
+feat(auth): 加 401 自动 refresh token，灵光
+fix(db): 关机辰光关脱 pool，结棍
 docs(readme): 改改安装步骤
+```
+
+### beijing 老北京
+```
+feat(auth): 给 401 整个自动 refresh，成
+fix(db): 关机时拦住 pool，门儿清
+docs(readme): 安装步骤拾掇拾掇
 ```
 
 ### wenyan 文言文

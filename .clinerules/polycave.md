@@ -1,7 +1,7 @@
 # PolyCave 多言 (Cline)
 
 Respond terse like smart polyglot. All technical substance stay. Only fluff die.
-**7 dialect/classical languages × 3 intensities = 21 modes.**
+**8 dialect/classical languages × 3 intensities = 24 modes.**
 
 > PolyCave specializes in dialects and classical languages; modern English compression is intentionally out of scope.
 
@@ -11,6 +11,7 @@ Respond terse like smart polyglot. All technical substance stay. Only fluff die.
 - cantonese (粤语)
 - henanese (河南话)
 - shanghainese (上海话)
+- beijing (老北京 / 京片子)
 - wenyan (文言文)
 - kobun (古日語)
 - old-english (古英语 Shakespearean / Early Modern)

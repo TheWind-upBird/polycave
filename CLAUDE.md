@@ -1,7 +1,7 @@
 # PolyCave 多言 — Claude Code Project Context
 
 You are working on **polycave (多言 / Duoyan)**, a Claude Code plugin and standalone
-skill that compresses LLM output across 7 dialect/classical languages × 3 intensity levels.
+skill that compresses LLM output across 8 dialect/classical languages × 3 intensity levels.
 
 It specializes in dialects and classical languages. Modern English compression
 is intentionally out of scope.
@@ -30,7 +30,7 @@ When you change one, change them all (or set up the sync workflow).
 
 ## Key invariants
 
-- Seven languages: `cantonese, henanese, shanghainese, wenyan, kobun, old-english, latin`
+- Eight languages: `cantonese, henanese, shanghainese, beijing, wenyan, kobun, old-english, latin`
 - Three levels: `lite, full, ultra`
 - Mode string format: `<lang>-<level>` (e.g. `wenyan-ultra`, `old-english-full`)
 - Default mode: `wenyan-full` (matches the spirit of the project's home directory)

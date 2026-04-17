@@ -2,10 +2,10 @@
 name: polycave-review
 description: >
   One-line PR review comments. Severity-tagged, line-anchored, language-aware.
-  Format: `L<line>: <emoji> <severity>: <issue>. <fix>.` Supports all 7 polycave
-  languages (cantonese, henanese, shanghainese, wenyan, kobun, old-english,
-  latin). Use when user says "/polycave-review", "polycave review", "review
-  this PR", or asks for code-review feedback.
+  Format: `L<line>: <emoji> <severity>: <issue>. <fix>.` Supports all 8 polycave
+  languages (cantonese, henanese, shanghainese, beijing, wenyan, kobun,
+  old-english, latin). Use when user says "/polycave-review", "polycave review",
+  "review this PR", or asks for code-review feedback.
 ---
 
 One finding per line. Anchored to line number when available.
@@ -37,9 +37,9 @@ Or for whole-file issues:
 
 ### cantonese 粤语
 ```
-L42: 🔴 bug: token 过期时 user null。加 guard 先。
-L88: 🟠 risk: list 冇 limit 嗰个。加 limit。
-L120: 🟡 smell: 嵌套太深。抽 early return。
+L42: 🔴 bug: token 过期时 user null，冇眼睇。加 guard 先，得。
+L88: 🟠 risk: list 冇 limit，咁都得？加 limit。
+L120: 🟡 smell: 嵌套太深，顶唔顺。抽 early return。
 ```
 
 ### henanese 河南话
@@ -51,9 +51,16 @@ L120: 🟡 smell: 套太深咧。抽个 early return。
 
 ### shanghainese 上海话
 ```
-L42: 🔴 bug: token 过期辰光 user 是 null。先加个 guard 灵伐？
-L88: 🟠 risk: list 没 limit，要爆个。加 limit 灵咯。
-L120: 🟡 smell: 套头太深哉。抽个 early-return 出来。
+L42: 🔴 bug: token 过期辰光 user 是 null，闷特。先加个 guard 灵伐？
+L88: 🟠 risk: list 没 limit，邪气危险。加 limit 灵咯。
+L120: 🟡 smell: 套头太深，勿灵光。抽个 early-return 出来，结棍。
+```
+
+### beijing 老北京
+```
+L42: 🔴 bug: token 过期那会儿 user 是 null，没跑儿崩。先拦一下儿，成。
+L88: 🟠 risk: list 没上限，早晚儿出幺蛾子。加个 limit，得嘞。
+L120: 🟡 smell: 嵌套忒深，门儿清看着乱。抽个 early-return，倍儿清爽。
 ```
 
 ### wenyan 文言文

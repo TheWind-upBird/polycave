@@ -84,17 +84,17 @@ for rel in ["skills/polycave/SKILL.md", "skills/polycave-commit/SKILL.md",
         check("name:" in text[:300], f"{rel}: frontmatter missing 'name:'")
         check("description:" in text[:500], f"{rel}: frontmatter missing 'description:'")
 
-# --- All 7 languages mentioned in main SKILL ---
+# --- All 8 languages mentioned in main SKILL ---
 main_skill = (ROOT / "skills/polycave/SKILL.md").read_text(encoding="utf-8")
-for lang in ["cantonese", "henanese", "shanghainese", "wenyan", "kobun", "old-english", "latin"]:
+for lang in ["cantonese", "henanese", "shanghainese", "beijing", "wenyan", "kobun", "old-english", "latin"]:
     check(lang in main_skill, f"main SKILL.md missing language: {lang}")
 
 # --- 'english' (modern) should NOT be present as a polycave mode ---
 config = (ROOT / "hooks/polycave-config.js").read_text(encoding="utf-8")
 check("'english'" not in config, "hooks/polycave-config.js still references modern 'english' mode (out of scope by design)")
 
-# --- All 7 langs in the LANGUAGES array of polycave-config.js ---
-for lang in ["cantonese", "henanese", "shanghainese", "wenyan", "kobun", "old-english", "latin"]:
+# --- All 8 langs in the LANGUAGES array of polycave-config.js ---
+for lang in ["cantonese", "henanese", "shanghainese", "beijing", "wenyan", "kobun", "old-english", "latin"]:
     check(f"'{lang}'" in config, f"hooks/polycave-config.js LANGUAGES missing: {lang}")
 
 # --- Report ---
