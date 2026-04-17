@@ -89,16 +89,33 @@ Bot: PolyCave deactivated. 通常モードに戻ります。
 
 ## インストール
 
-### Claude Code（プラグインマーケット経由、推奨）
+四つの方法はどれも同じゴール — Claude Code で `/polycave` と打てば多言モードが起動する。好きな方法を選ぶ：
 
-> `TheWind-upBird` をあなた（またはリポジトリ所有者）の GitHub ハンドルに置き換える。
+### 方法 1 — プラグインマーケット（最も簡単、二コマンド）
 
 ```bash
 claude plugin marketplace add TheWind-upBird/polycave
 claude plugin install polycave@polycave
 ```
 
-### Claude Code（スタンドアロン、マーケット不要）
+Claude Code を再起動し `/polycave` で起動。
+
+### 方法 2 — clone してローカルインストーラを実行
+
+方法 1 と同じ結果。ソースを事前に確認したい、またはプラグインマーケットに接続できない時に便利：
+
+```bash
+git clone https://github.com/TheWind-upBird/polycave.git
+cd polycave
+
+# macOS / Linux
+bash hooks/install.sh
+
+# Windows PowerShell
+.\hooks\install.ps1
+```
+
+### 方法 3 — ワンライナー遠隔インストール（clone 不要、マーケット経由せず）
 
 ```bash
 # macOS / Linux
@@ -108,12 +125,26 @@ bash <(curl -sL https://raw.githubusercontent.com/TheWind-upBird/polycave/main/h
 irm https://raw.githubusercontent.com/TheWind-upBird/polycave/main/hooks/install.ps1 | iex
 ```
 
-### その他のプラットフォーム
+### 方法 4 — 最軽量：SKILL.md だけ配置
 
-| プラットフォーム | コマンド / ファイル |
-|--------|------|
-| **Codex CLI** | リポジトリを clone し、`.codex/` と `plugins/polycave/` を Codex 設定にコピー |
-| **Gemini CLI** | `gemini extensions install https://github.com/TheWind-upBird/polycave` |
+モデルに方言を教えるだけで、`/polycave` コマンドもステータスバーもセッション越しの状態保持も不要な場合：
+
+```bash
+git clone https://github.com/TheWind-upBird/polycave.git
+cp -r polycave/skills/polycave* ~/.claude/skills/
+```
+
+### その他の AI ツール（Claude Code 以外）
+
+```bash
+git clone https://github.com/TheWind-upBird/polycave.git
+cd polycave
+```
+
+| ツール | 作業内容 |
+|--------|----------|
+| **Codex CLI** | `.codex/` を Codex 設定ディレクトリへコピー |
+| **Gemini CLI** | `gemini extensions install https://github.com/TheWind-upBird/polycave`（clone 不要）|
 | **Cursor** | `.cursor/` をプロジェクトルートにコピー（自動適用）|
 | **Windsurf** | `.windsurf/` をプロジェクトルートにコピー |
 | **Cline** | `.clinerules/polycave.md` をプロジェクトルートにコピー |
@@ -122,10 +153,15 @@ irm https://raw.githubusercontent.com/TheWind-upBird/polycave/main/hooks/install
 ### アンインストール
 
 ```bash
-# macOS / Linux
-bash hooks/uninstall.sh
-# Windows PowerShell
-.\hooks\uninstall.ps1
+# 方法 1（マーケット経由）でインストールした場合
+claude plugin uninstall polycave
+
+# 方法 2/3（hooks/install.sh）でインストールした場合
+bash hooks/uninstall.sh           # macOS / Linux
+.\hooks\uninstall.ps1             # Windows
+
+# 方法 4（SKILL.md 手動コピー）の場合
+rm -rf ~/.claude/skills/polycave*
 ```
 
 ---

@@ -93,16 +93,33 @@ The **plugin** packages all three so one command installs everything. If you onl
 
 ## Install
 
-### Claude Code (plugin marketplace) — recommended
+Pick the option that fits you. All four paths end with Claude Code responding in polycave mode when you type `/polycave`.
 
-> Replace `TheWind-upBird` with your GitHub handle (or whoever's repo you're installing).
+### Option 1 — Plugin marketplace (easiest, two commands)
 
 ```bash
 claude plugin marketplace add TheWind-upBird/polycave
 claude plugin install polycave@polycave
 ```
 
-### Claude Code (standalone, no marketplace)
+Restart Claude Code. Say `/polycave` to activate.
+
+### Option 2 — Clone and run the installer
+
+Same end result as Option 1, handy if you want to inspect the source first or the plugin marketplace is unreachable:
+
+```bash
+git clone https://github.com/TheWind-upBird/polycave.git
+cd polycave
+
+# macOS / Linux
+bash hooks/install.sh
+
+# Windows PowerShell
+.\hooks\install.ps1
+```
+
+### Option 3 — One-line remote installer (no clone, no marketplace)
 
 ```bash
 # macOS / Linux
@@ -112,24 +129,43 @@ bash <(curl -sL https://raw.githubusercontent.com/TheWind-upBird/polycave/main/h
 irm https://raw.githubusercontent.com/TheWind-upBird/polycave/main/hooks/install.ps1 | iex
 ```
 
-### Other platforms
+### Option 4 — Lightest: just drop in the SKILL.md
 
-| Platform | Command / file |
-|----------|---------------|
-| **Codex CLI** | Clone repo, copy `.codex/` and `plugins/polycave/` into your Codex config |
-| **Gemini CLI** | `gemini extensions install https://github.com/TheWind-upBird/polycave` |
-| **Cursor** | Clone, copy `.cursor/` to your project root (rules auto-apply) |
-| **Windsurf** | Clone, copy `.windsurf/` to your project root |
+If you only want Claude to know the dialects (no slash commands, no statusbar, no state persistence across sessions):
+
+```bash
+git clone https://github.com/TheWind-upBird/polycave.git
+cp -r polycave/skills/polycave* ~/.claude/skills/
+```
+
+### Other AI tools (not Claude Code)
+
+```bash
+git clone https://github.com/TheWind-upBird/polycave.git
+cd polycave
+```
+
+| Tool | What to do |
+|------|------------|
+| **Codex CLI** | Copy `.codex/` into your Codex config dir |
+| **Gemini CLI** | `gemini extensions install https://github.com/TheWind-upBird/polycave` (no clone needed) |
+| **Cursor** | Copy `.cursor/` to your project root (rules auto-apply) |
+| **Windsurf** | Copy `.windsurf/` to your project root |
 | **Cline** | Copy `.clinerules/polycave.md` to your project root |
 | **GitHub Copilot** | Copy `.github/copilot-instructions.md` to your project |
 
 ### Uninstall
 
 ```bash
-# macOS / Linux
-bash hooks/uninstall.sh
-# Windows PowerShell
-.\hooks\uninstall.ps1
+# If installed via Option 1 (marketplace)
+claude plugin uninstall polycave
+
+# If installed via Option 2 or 3 (hooks/install.sh)
+bash hooks/uninstall.sh           # macOS / Linux
+.\hooks\uninstall.ps1             # Windows
+
+# If installed via Option 4 (manual SKILL.md copy)
+rm -rf ~/.claude/skills/polycave*
 ```
 
 ---

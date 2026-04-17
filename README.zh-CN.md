@@ -89,16 +89,33 @@ LLM 回答经常啰嗦：冠词、虚词、"让我解释一下"、"好问题"。
 
 ## 安装
 
-### Claude Code（插件市场，推荐）
+下面四种装法殊途同归——装完 Claude Code 里打 `/polycave` 就能用。按喜好选一种：
 
-> 把 `TheWind-upBird` 换成你（或仓库主）的 GitHub 用户名。
+### 方式 1 — 插件市场（最简单，两条命令）
 
 ```bash
 claude plugin marketplace add TheWind-upBird/polycave
 claude plugin install polycave@polycave
 ```
 
-### Claude Code（独立安装，不走插件市场）
+重启 Claude Code，打 `/polycave` 激活。
+
+### 方式 2 — clone 下来跑本地安装器
+
+和方式 1 效果一样，适合想先看源码或者插件市场连不上的情况：
+
+```bash
+git clone https://github.com/TheWind-upBird/polycave.git
+cd polycave
+
+# macOS / Linux
+bash hooks/install.sh
+
+# Windows PowerShell
+.\hooks\install.ps1
+```
+
+### 方式 3 — 一行远程安装（不 clone，不走市场）
 
 ```bash
 # macOS / Linux
@@ -108,24 +125,43 @@ bash <(curl -sL https://raw.githubusercontent.com/TheWind-upBird/polycave/main/h
 irm https://raw.githubusercontent.com/TheWind-upBird/polycave/main/hooks/install.ps1 | iex
 ```
 
-### 其他平台
+### 方式 4 — 最轻：只丢 SKILL.md
 
-| 平台 | 命令 / 文件 |
-|------|-------------|
-| **Codex CLI** | clone 仓库后，复制 `.codex/` 和 `plugins/polycave/` 到你的 Codex 配置 |
-| **Gemini CLI** | `gemini extensions install https://github.com/TheWind-upBird/polycave` |
-| **Cursor** | clone 后把 `.cursor/` 复制到项目根目录（规则自动生效）|
-| **Windsurf** | clone 后把 `.windsurf/` 复制到项目根目录 |
+如果你只想让模型懂方言、不要 `/polycave` 命令也不要状态栏和跨会话状态：
+
+```bash
+git clone https://github.com/TheWind-upBird/polycave.git
+cp -r polycave/skills/polycave* ~/.claude/skills/
+```
+
+### 其他 AI 工具（非 Claude Code）
+
+```bash
+git clone https://github.com/TheWind-upBird/polycave.git
+cd polycave
+```
+
+| 工具 | 要做什么 |
+|------|----------|
+| **Codex CLI** | 把 `.codex/` 复制到你的 Codex 配置目录 |
+| **Gemini CLI** | `gemini extensions install https://github.com/TheWind-upBird/polycave`（无需 clone）|
+| **Cursor** | 把 `.cursor/` 复制到项目根目录（规则自动生效）|
+| **Windsurf** | 把 `.windsurf/` 复制到项目根目录 |
 | **Cline** | 把 `.clinerules/polycave.md` 复制到项目根目录 |
 | **GitHub Copilot** | 把 `.github/copilot-instructions.md` 复制到你的项目 |
 
 ### 卸载
 
 ```bash
-# macOS / Linux
-bash hooks/uninstall.sh
-# Windows PowerShell
-.\hooks\uninstall.ps1
+# 方式 1（插件市场）装的
+claude plugin uninstall polycave
+
+# 方式 2/3（跑 hooks/install.sh）装的
+bash hooks/uninstall.sh           # macOS / Linux
+.\hooks\uninstall.ps1             # Windows
+
+# 方式 4（手动复制 SKILL.md）装的
+rm -rf ~/.claude/skills/polycave*
 ```
 
 ---
