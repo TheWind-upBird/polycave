@@ -1,10 +1,11 @@
 {
-  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "polycave",
-  "description": "Polycave 多言 — polyglot compression for Claude Code. 7 dialects/classical languages × 3 intensity levels.",
   "owner": {
     "name": "TheWind-upBird",
     "url": "https://github.com/TheWind-upBird"
+  },
+  "metadata": {
+    "description": "Polycave 多言 — polyglot compression for Claude Code. 7 dialects/classical languages × 3 intensity levels."
   },
   "plugins": [
     {
