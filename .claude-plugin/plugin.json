@@ -1,0 +1,37 @@
+{
+  "name": "polycave",
+  "description": "Polycave 多言 — polyglot compression across 7 dialects/classical languages × 3 intensity levels (cantonese, henanese, shanghainese, wenyan, kobun, old-english, latin). Cuts LLM output 60-85% while keeping code untouched.",
+  "version": "0.1.0",
+  "author": {
+    "name": "TheWind-upBird",
+    "url": "https://github.com/TheWind-upBird"
+  },
+  "homepage": "https://github.com/TheWind-upBird/polycave",
+  "license": "MIT",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/polycave-activate.js\"",
+            "timeout": 5,
+            "statusMessage": "Loading polycave mode..."
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/polycave-mode-tracker.js\"",
+            "timeout": 5,
+            "statusMessage": "Tracking polycave mode..."
+          }
+        ]
+      }
+    ]
+  }
+}

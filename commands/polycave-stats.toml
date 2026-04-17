@@ -1,0 +1,22 @@
+description = "Cumulative polycave usage stats — total tokens saved across all sessions, bar chart + table."
+prompt = """
+Run the polycave cumulative stats script and show its output verbatim. Try the
+user-installed location first, then fall back to the plugin location:
+
+```bash
+SCRIPT="$HOME/.claude/polycave-hooks/polycave-stats.js"
+if [ -f "$SCRIPT" ]; then
+  node "$SCRIPT"
+else
+  node "${CLAUDE_PLUGIN_ROOT}/hooks/polycave-stats.js"
+fi
+```
+
+The script scans every Claude Code session transcript under ~/.claude/projects/,
+cross-references each assistant response against the polycave state-history log
+(~/.claude/polycave-state-history.jsonl), and aggregates total tokens saved per
+mode using the SKILL.md compression ratios (lite=30%, full=65%, ultra=85%).
+
+Show the full output of the script. Do NOT add commentary, summary, or interpretation
+— the script's output is already the report.
+"""

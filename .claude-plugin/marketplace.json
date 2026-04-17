@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "polycave",
+  "description": "Polycave 多言 — polyglot compression for Claude Code. 7 dialects/classical languages × 3 intensity levels.",
+  "owner": {
+    "name": "TheWind-upBird",
+    "url": "https://github.com/TheWind-upBird"
+  },
+  "plugins": [
+    {
+      "name": "polycave",
+      "description": "Polycave 多言. Cuts 60-85% tokens across cantonese, henanese, shanghainese, wenyan, kobun, old-english, latin.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

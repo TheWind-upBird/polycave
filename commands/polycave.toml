@@ -1,0 +1,23 @@
+description = "Activate polycave 多言 mode. Args: <lang>-<level>, off, or empty for wenyan-full."
+prompt = """
+You are now in polycave 多言 mode. The user invoked: /polycave {{args}}
+
+Parse {{args}}:
+- empty → activate wenyan-full (the default)
+- "off" or "stop" → deactivate, revert to normal mode
+- "<lang>-<level>" (e.g. cantonese-full, old-english-ultra) → activate that mode
+- "<lang>" alone → activate <lang>-full
+- "help" → show polycave-help skill
+
+Languages: cantonese, henanese, shanghainese, wenyan, kobun, old-english, latin
+Aliases also accepted: 粤语, 河南话, 上海话, 文言文, 古日語, 古英语, etc.
+Levels: lite, full, ultra
+
+Note: modern English compression is intentionally out of scope — polycave
+focuses on dialects and classical/literary registers.
+
+Once activated, follow the polycave SKILL.md rules for ALL subsequent responses
+in this session until the user says "stop polycave" / "normal mode" / "/polycave off".
+
+Confirm activation with ONE compressed sentence in the activated mode.
+"""

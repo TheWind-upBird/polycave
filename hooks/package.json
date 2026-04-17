@@ -1,0 +1,9 @@
+{
+  "name": "polycave-hooks",
+  "version": "0.1.0",
+  "description": "Polycave Claude Code hooks (activate, mode-tracker, statusline)",
+  "main": "polycave-activate.js",
+  "type": "commonjs",
+  "license": "MIT",
+  "private": true
+}

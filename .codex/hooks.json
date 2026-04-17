@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "session_start": [
+      {
+        "command": "node ${CODEX_PLUGIN_ROOT}/hooks/polycave-activate.js",
+        "timeout": 5
+      }
+    ],
+    "user_prompt_submit": [
+      {
+        "command": "node ${CODEX_PLUGIN_ROOT}/hooks/polycave-mode-tracker.js",
+        "timeout": 5
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "polycave",
+  "description": "Polycave 多言 — polyglot compression across 7 dialects and classical languages × 3 intensity levels. Cuts output 60-85% while keeping code untouched.",
+  "version": "0.1.0",
+  "contextFileName": "GEMINI.md"
+}

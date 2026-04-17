@@ -1,0 +1,11 @@
+# Codex CLI plugin config for polycave 多言
+[plugin]
+name = "polycave"
+version = "0.1.0"
+description = "Polycave 多言 — polyglot compression across 7 dialects/classical languages × 3 levels."
+
+[plugin.context]
+file = "AGENTS.md"
+
+[features]
+polycave = true

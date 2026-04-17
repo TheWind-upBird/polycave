@@ -1,0 +1,11 @@
+description = "Polycave-style PR review: one-line findings, severity-tagged. Args: file path or PR ref."
+prompt = """
+Review the target ({{args}} — path, glob, or empty for current diff) and emit
+findings per the polycave-review SKILL.md format:
+
+  L<line>: <emoji> <severity>: <issue>. <fix>.
+
+Language: match active polycave mode, or wenyan if none active.
+Group by file. Skip files with no findings. If no issues anywhere, output `LGTM 🟢`.
+Do NOT auto-edit code. Suggestions only.
+"""

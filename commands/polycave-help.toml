@@ -1,0 +1,6 @@
+description = "Show polycave quick-reference card."
+prompt = """
+Display the polycave-help SKILL.md content as a concise reference card.
+Show all 5 languages, 3 intensity levels, activation/deactivation phrases,
+sub-skills, and auto-clarity behavior.
+"""
